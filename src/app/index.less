@@ -1,0 +1,119 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+
+@main_blue: #6289d9;
+
+html {
+  font-family: 'Roboto Slab', serif;
+}
+
+[layout=row] {
+  flex-direction: row;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: auto;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+md-toolbar.md-default-theme {
+  background-color: black;
+}
+
+section.jumbotron {
+  margin-bottom: 30px;
+  padding: 1px 30px;
+  background-color: #5aadbb;
+  text-align: center;
+
+  color: white;
+
+  h1 {
+    font-size: 3em;
+  }
+}
+
+.techs {
+  display: flex;
+  flex-flow: row wrap;
+
+  md-card {
+    width: 30%;
+
+    img.pull-right {
+      float: right;
+      width: 50px;
+    }
+  }
+}
+// injector
+// endinjector
+
+
+//HEADER
+
+header {
+    padding: 0px 20px;
+}
+
+md-toolbar.md-default-theme {
+  background-color: #fff;
+}
+
+.sign button.md-button-inner {
+  background: @main_blue;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+//ENDHEADER
+
+//FORM
+
+.nextride_form.jumbotron {
+  background: url(/assets/images/back1.png);
+  height: 791px;
+}
+
+.nextride_form.jumbotron h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  height: 80px;
+  padding-top: 17px;
+}
+
+md-whiteframe.md-whiteframe-z3 {
+  background: #fff;
+  max-width: 830px;
+  height: 556px;
+  margin: 0px auto;
+}
+
+//FORM
+
+//CARDS
+
+//CARDS
+
+//BANNER
+
+.jumbotron.mobile_apps {
+  background: url(/assets/images/back2.png);
+  height: 414px;
+}
+
+.jumbotron.mobile_apps [layout="row"] {
+  height: 100%;
+}
+
+//BANNER
