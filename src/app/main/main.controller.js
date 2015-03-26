@@ -1,64 +1,34 @@
 'use strict';
 
 angular.module('nextRide')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      {
-        'title': 'AngularJS',
-        'url': 'https://angularjs.org/',
-        'description': 'HTML enhanced for web apps!',
-        'logo': 'angular.png'
-      },
-      {
-        'title': 'BrowserSync',
-        'url': 'http://browsersync.io/',
-        'description': 'Time-saving synchronised browser testing.',
-        'logo': 'browsersync.png'
-      },
-      {
-        'title': 'GulpJS',
-        'url': 'http://gulpjs.com/',
-        'description': 'The streaming build system.',
-        'logo': 'gulp.png'
-      },
-      {
-        'title': 'Jasmine',
-        'url': 'http://jasmine.github.io/',
-        'description': 'Behavior-Driven JavaScript.',
-        'logo': 'jasmine.png'
-      },
-      {
-        'title': 'Karma',
-        'url': 'http://karma-runner.github.io/',
-        'description': 'Spectacular Test Runner for JavaScript.',
-        'logo': 'karma.png'
-      },
-      {
-        'title': 'Protractor',
-        'url': 'https://github.com/angular/protractor',
-        'description': 'End to end test framework for AngularJS applications built on top of WebDriverJS.',
-        'logo': 'protractor.png'
-      },
-      {
-        'title': 'jQuery',
-        'url': 'http://jquery.com/',
-        'description': 'jQuery is a fast, small, and feature-rich JavaScript library.',
-        'logo': 'jquery.jpg'
-      },
-      {
-        'title': 'Angular Material Design',
-        'url': 'https://material.angularjs.org/#/',
-        'description': 'The Angular reference implementation of the Google\'s Material Design specification.',
-        'logo': 'angular-material.png'
-      },
-      {
-        'title': 'Less',
-        'url': 'http://lesscss.org/',
-        'description': 'Less extends the CSS language, adding features that allow variables, mixins, functions and many other techniques.',
-        'logo': 'less.png'
+  .controller('FirstCtrl', function ($scope, $location) {
+    $scope.cars = [
+                {
+                  title:'ECONOMY',
+                  img:'assets/images/step1/car_Image_1.png',
+                  price:80,
+                  id:1
+                },
+                {
+                  title: 'BUSINESS',
+                  img:'assets/images/step1/car_Image_2.png',
+                  price: 90,
+                  id:2
+                },
+                {
+                  title: '1ST CLASS',
+                  img: 'assets/images/step1/car_Image_3.png',
+                  price: 105,
+                  id:3
+                }
+              ];
+    var validateBooking = function (booking) {
+      return true;
+    }
+
+    $scope.$watchCollection('booking', function (val) {
+      if (validateBooking(val)) {
+        $location.path('/second');
       }
-    ];
-    angular.forEach($scope.awesomeThings, function(awesomeThing) {
-      awesomeThing.rank = Math.random();
     });
   });

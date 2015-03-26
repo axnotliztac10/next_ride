@@ -67,10 +67,11 @@ header {
 
 md-toolbar.md-default-theme {
   background-color: #fff;
+  box-shadow: none;
 }
 
-.sign button.md-button-inner {
-  background: @main_blue;
+.sign.md-button {
+  background-color: @main_blue !important;
   font-size: 14px;
   font-weight: bold;
   padding: 10px;
@@ -83,6 +84,7 @@ md-toolbar.md-default-theme {
 .nextride_form.jumbotron {
   background: url(/assets/images/back1.png);
   height: 791px;
+  color: #000;
 }
 
 .nextride_form.jumbotron h1 {
@@ -90,18 +92,215 @@ md-toolbar.md-default-theme {
   font-weight: lighter;
   height: 80px;
   padding-top: 17px;
+  color: #fff;
 }
 
 md-whiteframe.md-whiteframe-z3 {
   background: #fff;
-  max-width: 830px;
+  width: 830px;
   height: 556px;
   margin: 0px auto;
+  display: block;
+  box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.5);
+}
+
+.form_title {
+  font-size: 25px;
+  font-weight: lighter;
+  color: #6289d9;
+  padding-top: 18px;
+  width: 50%;
+  float: left;
+}
+
+ul.nextride_nav {
+  list-style: none;
+  width: 50%;
+  float: left;
+}
+
+.nextride_nav li {
+  color: gray;
+  float: right;
+  padding: 5px 13px;
+  border-radius: 50%;
+  border: 3px solid gray;
+  margin: 0px 30px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.nextride_nav li.active {
+  background: @main_blue;
+  color: #fff;
+  border: 3px solid @main_blue;
+}
+
+.form_row {
+  width: 100%;
+  height: 70px;
+  float: left;
+}
+
+.inputs3 {
+  padding: 0px 20px;
+  margin-top: 30px;
+}
+
+md-input-container .md-placeholder {
+  top: -20px !important;
+  left: 8px;
+}
+
+md-input-container.md-default-theme {
+  height: 40px;
+  padding: 0px;
+  max-width: 204px;
+}
+
+md-select {
+  margin: 0px 5px;
+  height: 40px;
+  width: 170px;
+}
+
+md-select-label {
+  height: 100%;
+  padding: 0px;
+}
+
+.md-select-icon {
+  right: 0px;
+  position: absolute;
+}
+
+md-checkbox {
+  float: left;
+}
+
+md-checkbox.md-default-theme .md-icon {
+  border: 0px;
+}
+
+md-checkbox.md-default-theme.md-checked .md-icon {
+  background-color: #fff;
+}
+
+md-checkbox.md-default-theme .md-icon:after {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+md-checkbox.md-default-theme .md-label {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+md-checkbox.md-default-theme.md-checked .md-label {
+  color: rgba(0, 0, 0, 1);
+}
+
+md-checkbox.md-default-theme.md-checked .md-icon:after {
+  border-color: @main_blue;
+}
+
+md-checkbox .md-icon:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  display: table;
+  width: 6px;
+  height: 12px;
+  border: 4px solid;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+}
+
+md-checkbox.md-checked .md-icon:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  display: table;
+  width: 6px;
+  height: 12px;
+  border: 4px solid;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+}
+
+.md-input {
+  max-height: 40px;
+  border: 1px solid rgba(0,0,0,0.12) !important;
+}
+
+.md-button.choose {
+  background-color: #8ed036 !important;
+  width: 106px;
+  height: 41px;
+}
+
+.md-button.choose span {
+  text-transform: none;
+  font-weight: bold;
+}
+
+.form_row.full {
+  height: 316px;
+}
+
+.form_row.full .car {
+  width: 33.3%;
+  float: left;
+  height: 100%;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.full p.title {
+  margin: 0px 0px;
+}
+
+.full p.price {
+  margin: 10px 0px;
+  color: #626262;
+}
+
+.price span {
+  font-size: 27px;
+  font-weight: lighter;
+  line-height: 33px;
+  color: @main_blue;
 }
 
 //FORM
 
 //CARDS
+
+.techs .thumbnail h3 {
+  color: @main_blue;
+  font-weight: lighter;
+  margin-top: 50px;
+}
+
+.techs md-card {
+  max-width: 276px;
+  box-shadow: none;
+}
+
+.techs p.subtitle {
+  color: #939393;
+}
+
+.techs p.content {
+  font-size: 14px;
+  text-align: justify;
+  margin-bottom: 80px;
+}
 
 //CARDS
 
@@ -117,3 +316,168 @@ md-whiteframe.md-whiteframe-z3 {
 }
 
 //BANNER
+
+
+md-input-container.md-input-focused .md-placeholder {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 19px, 0);
+  transform: translate3d(0, 19px, 0);
+}
+
+md-input-container.md-input-has-value .md-placeholder {
+  opacity: 0.5 !important;
+}
+
+md-input-container .md-placeholder {
+  opacity: 1 !important; 
+}
+
+md-input-container.md-default-theme .md-input {
+    padding: 17px 9px 4px;
+}
+
+.md-input-has-value .md-input {
+
+}
+
+.time-date > .display > .title {
+  background-color: rgb(63,81,181);
+}
+
+.time-date > .display > .content {
+  background-color: @main_blue;
+}
+
+.time-date > .control > .slider > .date-control > .days .day-cell.selected {
+  background-color: @main_blue;
+}
+
+.time-date > .buttons {
+    position: absolute;
+  bottom: -12px;
+  right: 2px;
+}
+
+.time-date button, .time-date .button {
+  color: @main_blue;
+}
+
+.time-date > .control > .slider > .date-control > .days .day-cell:hover, .time-date > .control > .slider > .date-control > .days .day-cell:active {
+  background-color: @main_blue;
+}
+
+md-select-menu, md-select-menu md-content {
+  max-height: 1000px !important;
+}
+
+md-select-menu:not(.md-overflow) md-content {
+  padding: 0px;
+}
+
+md-label {
+  border: none;
+}
+
+/*
+GOOGLE STHYLEs
+*/
+
+.pac-container {
+    background-color: #fff;
+    position: absolute !important;
+    z-index: 1000;
+    border-radius: 2px;
+    border-top: 1px solid #d9d9d9;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+
+  .pac-container:after {
+      content: "";
+      padding: 1px 1px 1px 0;
+      height: 16px;
+      text-align: right;
+      display: block;
+      background-image: url(//maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white2.png);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 104px 16px;
+  }
+
+  .hdpi.pac-container:after {
+      background-image: url(//maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white2_hdpi.png)
+  }
+
+  .pac-item {
+      cursor: default;
+      padding: 0 4px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: 30px;
+      text-align: left;
+      border-top: 1px solid #e6e6e6;
+      font-size: 11px;
+      color: #999;
+  }
+
+  .pac-item:hover {
+      background-color: #fafafa;
+  }
+
+  .pac-item-selected, .pac-item-selected:hover {
+      background-color: #ebf2fe;
+  }
+
+  .pac-matched {
+      font-weight: 700;
+  }
+
+  .pac-item-query {
+      font-size: 13px;
+      padding-right: 3px;
+      color: #000;
+  }
+
+  .pac-icon {
+      width: 15px;
+      height: 20px;
+      margin-right: 7px;
+      margin-top: 6px;
+      display: inline-block;
+      vertical-align: top;
+      background-image: url(//maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);
+      background-size: 34px;
+  }
+
+  .hdpi .pac-icon {
+      background-image: url(//maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png);
+  }
+
+  .pac-icon-search {
+      background-position: -1px -1px;
+  }
+
+  .pac-item-selected .pac-icon-search {
+      background-position: -18px -1px;
+  }
+
+  .pac-icon-marker {
+      background-position: -1px -161px;
+  }
+
+  .pac-item-selected .pac-icon-marker {
+      background-position: -18px -161px;
+  }
+
+  .pac-placeholder {
+      color: gray;
+  }
+
+  .custom-prediction-label {
+      font-style: italic;
+  }
+}
