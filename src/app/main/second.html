@@ -8,12 +8,12 @@
 </div>
 <div class="form_row inputs3" layout>
   <md-select placeholder="Passengers" ng-model="booking.passenger" style="margin-right: 11px;">
-  <md-option value="1">Passenger 1</md-option>
-  <md-option value="2">Passenger 2</md-option>
-</md-select>
-<md-input-container flex>
-<input ng-model="booking.pickup" g-places-autocomplete marker-id="markerA" placeholder="From">
-</md-input-container>
+    <md-option value="1">Passenger 1</md-option>
+    <md-option value="2">Passenger 2</md-option>
+  </md-select>
+  <md-input-container flex>
+  <input ng-model="booking.pickup" g-places-autocomplete marker-id="markerA" placeholder="From">
+  </md-input-container>
 <md-input-container flex style="margin-right: 11px;">
 <input ng-model="booking.drop" g-places-autocomplete marker-id="markerB" placeholder="To">
 </md-input-container>
@@ -23,15 +23,80 @@
 </div>
 <div class="form_row" style="padding-left: 131px;">
   <md-checkbox ng-model="booking.options.oneway" ng-init="booking.options.oneway = true">
-  One way
-</md-checkbox>
-<md-checkbox ng-model="booking.options.roundtrip">
-Round trip
-</md-checkbox>
-<md-checkbox ng-model="booking.options.multistop">
-Multi stop
-</md-checkbox>
-<md-checkbox ng-model="booking.options.houerly">
-Houerly
-</md-checkbox>
+    One way
+  </md-checkbox>
+  <md-checkbox ng-model="booking.options.roundtrip">
+  Round trip
+  </md-checkbox>
+  <md-checkbox ng-model="booking.options.multistop">
+  Multi stop
+  </md-checkbox>
+  <md-checkbox ng-model="booking.options.houerly">
+  Houerly
+  </md-checkbox>
+</div>
+<div class="form_row">
+  <div class="col">
+    <div class="form_subtitle">Passengers</div>
+    <md-input-container flex>
+      <input ng-model="booking.pickup" placeholder="Passenger Surname">
+    </md-input-container>
+    <md-input-container flex>
+      <input ng-model="booking.pickup" placeholder="Passenger Firstname">
+    </md-input-container>
+    <md-input-container flex>
+      <input ng-model="booking.pickup" placeholder="Passenger Email">
+    </md-input-container>
+    <md-input-container flex>
+      <input ng-model="booking.pickup" placeholder="Passenger Mobile">
+    </md-input-container>
+    <p><a class="left" href="#">Add Passenger</a></p>
+  </div>
+  <div class="col">
+    <div class="form_subtitle">Payment Details <span>
+      <img src="assets/images/step2/amex.png" alt="">
+      <img src="assets/images/step2/visa.png" alt="">
+      <img src="assets/images/step2/discover.png" alt="">
+    </span></div>
+    
+    <md-input-container flex>
+      <input ng-model="booking.pickup" placeholder="Name on Card">
+    </md-input-container>
+    <md-input-container flex>
+      <input ng-model="booking.pickup" placeholder="Card Number">
+    </md-input-container>
+    
+    <div class="col fixed-left">
+      <md-input-container flex>
+        <input ng-model="booking.pickup" placeholder="Month">
+      </md-input-container>
+      <md-input-container flex>
+        <input ng-model="booking.pickup" placeholder="Year">
+      </md-input-container>
+    </div>
+
+    <div class="col fixed-right">
+      <md-input-container class="full" flex>
+        <input ng-model="booking.pickup" placeholder="Security Code">
+      </md-input-container>
+    </div>
+
+    <div class="form_subtitle">
+      Create Account
+    </div>
+    
+      <md-input-container flex>
+        <input ng-model="booking.pickup" placeholder="Email (Username)">
+      </md-input-container>
+      <md-input-container flex>
+        <input ng-model="booking.pickup" placeholder="Password">
+      </md-input-container>
+      
+      <md-button ng-click="$parent.booking.car = car" class="md-raised md-primary choose left">Next</md-button>
+
+  </div>
+  <p class="info">
+    <img src="assets/images/step2/icn_lock.png" alt="">
+    This is a secure 128-Bit SSL Encrypted payment. You are safe.
+  </p>
 </div>
