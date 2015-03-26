@@ -1,0 +1,37 @@
+<div class="form_row">
+  <div class="form_title">Some more details</div>
+  <ul class="nextride_nav">
+    <li>3</li>
+    <li class="active">2</li>
+    <li>1</li>
+  </ul>
+</div>
+<div class="form_row inputs3" layout>
+  <md-select placeholder="Passengers" ng-model="booking.passenger" style="margin-right: 11px;">
+  <md-option value="1">Passenger 1</md-option>
+  <md-option value="2">Passenger 2</md-option>
+</md-select>
+<md-input-container flex>
+<input ng-model="booking.pickup" g-places-autocomplete marker-id="markerA" placeholder="From">
+</md-input-container>
+<md-input-container flex style="margin-right: 11px;">
+<input ng-model="booking.drop" g-places-autocomplete marker-id="markerB" placeholder="To">
+</md-input-container>
+<md-select placeholder="Date" class="date-picker-selecter" ng-model="booking.date">
+<time-date-picker ng-model="booking.date"></time-date-picker>
+</md-select>
+</div>
+<div class="form_row" style="padding-left: 131px;">
+  <md-checkbox ng-model="booking.options.oneway" ng-init="booking.options.oneway = true">
+  One way
+</md-checkbox>
+<md-checkbox ng-model="booking.options.roundtrip">
+Round trip
+</md-checkbox>
+<md-checkbox ng-model="booking.options.multistop">
+Multi stop
+</md-checkbox>
+<md-checkbox ng-model="booking.options.houerly">
+Houerly
+</md-checkbox>
+</div>

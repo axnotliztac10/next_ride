@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nextRide')
-  .controller('FirstCtrl', function ($scope, $location) {
+  .controller('FirstCtrl', function ($scope, $location, $rootScope) {
     $scope.cars = [
                 {
                   title:'ECONOMY',
@@ -23,12 +23,21 @@ angular.module('nextRide')
                 }
               ];
     var validateBooking = function (booking) {
-      return true;
+      if (Object.keys(booking).length > 5) {
+        $rootScope.booking = booking;
+        return true;
+      }
+      return false;
     }
 
     $scope.$watchCollection('booking', function (val) {
       if (validateBooking(val)) {
-        $location.path('/second');
+        $location.path('/main/second');
       }
     });
+  });
+
+  angular.module('nextRide')
+  .controller('SecondCtrl', function ($scope, $location, $rootScope) {
+    $scope.booking = $rootScope.booking;
   });

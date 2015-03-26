@@ -5,52 +5,8 @@
   <md-content>
     <section class="jumbotron nextride_form">
       <h1>Book Easy. Travel Safe.</h1>
-      <md-whiteframe class="md-whiteframe-z3">
-            <div class="form_row">
-              <div class="form_title">Where would you like to go?</div>
-              <ul class="nextride_nav">
-                <li>3</li>
-                <li>2</li>
-                <li class="active">1</li>
-              </ul>
-            </div>
-            <div class="form_row inputs3" layout>
-              <md-select placeholder="Passengers" ng-model="booking.passenger" style="margin-right: 11px;">
-                <md-option value="1">Passenger 1</md-option>
-                <md-option value="2">Passenger 2</md-option>
-              </md-select>
-              <md-input-container flex>
-                <input ng-model="booking.pickup" g-places-autocomplete marker-id="markerA" placeholder="From">
-              </md-input-container>
-              <md-input-container flex style="margin-right: 11px;">
-                <input ng-model="booking.drop" g-places-autocomplete marker-id="markerB" placeholder="To">
-              </md-input-container>
-              <md-select placeholder="Date" class="date-picker-selecter" ng-model="booking.date">
-                <time-date-picker ng-model="date"></time-date-picker>
-              </md-select>
-            </div>
-            <div class="form_row" style="padding-left: 131px;">
-              <md-checkbox ng-model="booking.options.oneway" ng-init="booking.options.oneway = true">
-                One way
-              </md-checkbox>
-              <md-checkbox ng-model="booking.options.roundtrip">
-                Round trip
-              </md-checkbox>
-              <md-checkbox ng-model="booking.options.multistop">
-                Multi stop
-              </md-checkbox>
-              <md-checkbox ng-model="booking.options.houerly">
-                Houerly
-              </md-checkbox>
-            </div>
-            <div class="form_row full">
-              <div class="car" ng-repeat="car in cars">
-                <p class="title">{{car.title}}</p>
-                <img src="{{car.img}}">
-                <p class="price"><span>${{car.price}}</span> each way</p>
-                <md-button ng-click="$parent.booking.car = car" class="md-raised md-primary choose">Choose</md-button>
-              </div>
-            </div>
+      <md-whiteframe ui-view class="md-whiteframe-z3">
+            
       </md-whiteframe>
     </section>
     
