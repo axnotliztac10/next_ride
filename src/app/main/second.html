@@ -39,16 +39,16 @@
   <div class="col">
     <div class="form_subtitle">Passengers</div>
     <md-input-container flex>
-      <input ng-model="booking.pickup" placeholder="Passenger Surname">
+      <input ng-model="passenger.surname" placeholder="Passenger Surname">
     </md-input-container>
     <md-input-container flex>
-      <input ng-model="booking.pickup" placeholder="Passenger Firstname">
+      <input ng-model="passenger.firstname" placeholder="Passenger Firstname">
     </md-input-container>
     <md-input-container flex>
-      <input ng-model="booking.pickup" placeholder="Passenger Email">
+      <input ng-model="passenger.email" placeholder="Passenger Email">
     </md-input-container>
     <md-input-container flex>
-      <input ng-model="booking.pickup" placeholder="Passenger Mobile">
+      <input ng-model="passenger.mobile" placeholder="Passenger Mobile">
     </md-input-container>
     <p><a class="left" href="#">Add Passenger</a></p>
   </div>
@@ -60,24 +60,24 @@
     </span></div>
     
     <md-input-container flex>
-      <input ng-model="booking.pickup" placeholder="Name on Card">
+      <input ng-model="payment.cardname" placeholder="Name on Card">
     </md-input-container>
     <md-input-container flex>
-      <input ng-model="booking.pickup" placeholder="Card Number">
+      <input ng-model="payment.cardnumber" placeholder="Card Number">
     </md-input-container>
     
     <div class="col fixed-left">
       <md-input-container flex>
-        <input ng-model="booking.pickup" placeholder="Month">
+        <input ng-model="payment.month" placeholder="Month">
       </md-input-container>
       <md-input-container flex>
-        <input ng-model="booking.pickup" placeholder="Year">
+        <input ng-model="payment.year" placeholder="Year">
       </md-input-container>
     </div>
 
     <div class="col fixed-right">
       <md-input-container class="full" flex>
-        <input ng-model="booking.pickup" placeholder="Security Code">
+        <input ng-model="payment.securitycode" placeholder="Security Code">
       </md-input-container>
     </div>
 
@@ -86,10 +86,10 @@
     </div>
     
       <md-input-container flex>
-        <input ng-model="booking.pickup" placeholder="Email (Username)">
+        <input ng-model="booking.email" placeholder="Email (Username)">
       </md-input-container>
       <md-input-container flex>
-        <input ng-model="booking.pickup" placeholder="Password">
+        <input ng-model="booking.password" type="password" placeholder="Password">
       </md-input-container>
       
       <md-button ng-click="next()" class="md-raised md-primary choose left">Next</md-button>
