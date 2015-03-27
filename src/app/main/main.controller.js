@@ -39,5 +39,15 @@ angular.module('nextRide')
 
   angular.module('nextRide')
   .controller('SecondCtrl', function ($scope, $location, $rootScope) {
-    $scope.booking = $rootScope.booking;
+    //$scope.booking = $rootScope.booking;
+
+    $scope.next = function () {
+      $location.path('/main/third');
+    }
+
+  });
+
+  angular.module('nextRide')
+  .controller('ThirdCtrl', function ($scope, $location, $rootScope) {
+    //$scope.booking = $rootScope.booking;
   });

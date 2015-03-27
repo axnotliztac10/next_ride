@@ -17,7 +17,12 @@ angular.module('nextRide', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
 			url: '/second',
 			templateUrl: 'app/main/second.html',
 			controller: 'SecondCtrl'
-		});;
+		})
+		.state('main.third', {
+			url: '/third',
+			templateUrl: 'app/main/third.html',
+			controller: 'ThirdCtrl'
+		});
 
     $urlRouterProvider.otherwise('/main/first');
   })

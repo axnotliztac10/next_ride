@@ -1,0 +1,59 @@
+<div class="form_row">
+	<div class="form_title">Last Step</div>
+	<ul class="nextride_nav">
+		<li class="active">3</li>
+		<li>2</li>
+		<li>1</li>
+	</ul>
+</div>
+<div class="form_row height-flex">
+	<div class="bookings">
+		<div class="booking" layout="row" layout-align="space-around center">
+			<div class="bold">BOOKING 1</div>
+			<div>MIN 1 - MAX 4 PEOPLE</div>
+			<div>MAX 3 BIG BAGS</div>
+			<div>10KMS/23MINS</div>
+			<div>Economy</div>
+			<div class="bold">$92</div>
+			<div><a href="">Edit Booking</a></div>
+		</div>
+		<div class="booking" layout="row" layout-align="space-around center">
+			<div class="bold">BOOKING 2</div>
+			<div>MIN 1 - MAX 4 PEOPLE</div>
+			<div>MAX 3 BIG BAGS</div>
+			<div>10KMS/23MINS</div>
+			<div>Economy</div>
+			<div class="bold">$92</div>
+			<div><a href="">Edit Booking</a></div>
+		</div>
+	</div>
+</div>
+<div class="form_row">
+	<div class="col" style="padding-top: 80px">
+		<md-input-container class="middle breakmax" flex>
+			<input ng-model="booking.pickup" placeholder="Email (Username)">
+		</md-input-container>
+		<md-button class="md-raised md-primary choose left apply">Apply</md-button>
+	</div>
+	<div class="col">
+		<table class="resume">
+			<tr>
+				<td>Base Fare</td>
+				<td>$300.00</td>
+			</tr>
+			<tr>
+				<td>C/C Fee</td>
+				<td>$30.00</td>
+			</tr>
+			<tr class="total" style="height: 50px;">
+				<td class="bold">Total</td>
+				<td class="bold">$330.00</td>
+			</tr>
+		</table>
+
+		<hr>
+	<p class="mini">By clicking the button below you agree to nextRide <span class="blue">Terms and Conditions</span> and <span class="blue">Privacy Plicy</span> </p>
+	</div>
+
+	<md-button style="width: 150px;margin: 20px;" ng-click="$parent.booking.car = car" class="md-raised md-primary choose left">Book this ride</md-button>
+</div>

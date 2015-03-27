@@ -524,6 +524,14 @@ GOOGLE STHYLEs
   width: 92%;
 }
 
+.form_row .col md-input-container.middle {
+  width: 72%;
+}
+
+.form_row .col md-input-container.breakmax {
+  max-width: 1000px !important;
+}
+
 a {
   text-decoration: none;
   color: rgb(63,81,181),
@@ -549,3 +557,101 @@ p.info img {
   margin-bottom: 2px;
   margin-right: 4px;
 }
+
+md-input-container.md-default-theme {
+  overflow: hidden;
+}
+
+.bookings {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.booking .bold, .booking a, .resume .bold {
+  font-weight: bolder;
+}
+
+.booking {
+  padding: 10px;
+}
+
+.height-flex {
+  height: auto;
+}
+
+button.apply.md-button {
+    width: 26%;
+  margin-left: 1%;
+  margin-right: 0%;
+  background-color: #fff !important;
+  box-shadow: none !important;
+  border: @main_blue 1px solid;
+  color: @main_blue;
+}
+
+.apply.md-button.choose span {
+  background: #fff;
+  color: @main_blue !important;
+}
+
+
+table.resume {
+  width: 100%;
+  margin-top: 50px;
+}
+
+table.resume tr.total {
+  border: 1px solid #ccc; 
+  border-right: 0px;
+  border-left: 0px;
+}
+
+table.resume tr > td {
+  padding: 5px;
+  height: 30px;
+}
+
+table.resume tr > td:nth-child(2) {
+  text-align: right;
+}
+
+hr {
+  margin: 2px;
+}
+
+.mini {
+  font-size: 10px;
+  margin: 0px;
+  line-height: 18px;
+}
+
+.mini span.blue {
+  color: @main_blue;
+}
+
+.ng-enter, .ng-leave{
+ -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+      transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s;
+ }
+
+
+.ng-enter.ng-enter-active {
+ position: absolute;
+ left: 500px;
+}
+
+.ng-enter {
+ left: 0;
+}
+
+.ng-leave.ng-leave-active {
+ opacity: 0;
+ }
+
+.ng-leave {
+ right: 0;
+ }
