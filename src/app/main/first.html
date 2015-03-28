@@ -18,7 +18,8 @@
 <input ng-model="booking.drop" g-places-autocomplete marker-id="markerB" placeholder="To">
 </md-input-container>
 <md-select placeholder="Date" class="date-picker-selecter" ng-model="booking.date">
-<time-date-picker ng-model="booking.date"></time-date-picker>
+  <md-select-label>{{booking.date | date:'dd-M-yyyy H:mm' || 'Date'}}</md-select-label>
+  <time-date-picker ng-model="booking.date"></time-date-picker>
 </md-select>
 </div>
 <div class="form_row" style="padding-left: 131px;">
