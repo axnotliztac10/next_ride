@@ -2,8 +2,8 @@
   <div class="form_title">Where would you like to go?</div>
   <ul class="nextride_nav">
     <li>3</li>
-    <li>2</li>
-    <li class="active">1</li>
+    <li class="yes">2</li>
+    <li class="active yes">1</li>
   </ul>
 </div>
 <div class="form_row inputs3" layout>
@@ -37,7 +37,7 @@ Houerly
 </md-checkbox>-->
 </div>
 <div class="form_row full">
-  <div class="car" ng-repeat="car in cars">
+  <div class="car" ng-repeat="car in cars" ng-class="{'selected': $parent.booking.car.id == car.id}">
     <p class="title">{{car.title}}</p>
     <img src="{{car.img}}">
     <p class="price"><span>${{car.price}}</span> each way</p>

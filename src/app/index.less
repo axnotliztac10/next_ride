@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 @import url(/bower_components/md-date-time-ai/dist/md-date-time.css);
 
 @main_blue: #6289d9;
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Source Sans Pro', serif;
 }
 
 [layout=row] {
@@ -63,7 +63,8 @@ section.jumbotron {
 //HEADER
 
 header {
-    padding: 0px 20px;
+    padding: 10px 20px;
+    height: 82px;
 }
 
 md-toolbar.md-default-theme {
@@ -73,9 +74,11 @@ md-toolbar.md-default-theme {
 
 .sign.md-button {
   background-color: @main_blue !important;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 11px;
+  font-weight: bolder;
   padding: 10px;
+  width: 135px;
+  height: 41px;
 }
 
 //ENDHEADER
@@ -121,6 +124,7 @@ ul.nextride_nav {
 }
 
 .nextride_nav li {
+  position: relative;;
   color: gray;
   float: right;
   padding: 5px 13px;
@@ -260,6 +264,11 @@ md-checkbox.md-checked .md-icon:after {
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
   padding-top: 10px;
+  opacity: 0.8;
+}
+
+.form_row.full .car:hover, .form_row.full .car.selected {
+  opacity: 1;
 }
 
 .full p.title {
@@ -671,3 +680,38 @@ hr {
  md-select.md-default-theme .md-select-label {
     color: rgba(0,0,0,0.54);
  }
+
+ .feed {
+  max-width: 280px !important;
+  margin: 10px auto !important;
+  border: 2px solid #fff;
+ }
+
+ .feed .md-placeholder {
+  color: #fff !important;
+ }
+
+ .feed-button {
+  background-color: #fff !important;
+  width: 135px;
+  height: 41px;
+  color: @main_blue !important;
+ }
+
+ .nextride_nav li.yes:after {
+  content: '______';
+  position: absolute;
+  font-weight: bolder;
+  font-size: 20px;
+  top: -7px;
+  left: 37px;
+  color: gray;
+}
+
+.nextride_nav li.yes.nex_active:after {
+  color: @main_blue;
+}
+
+.date-picker-selecter .md-select-label .md-select-icon:after {
+  top: -15px;
+}

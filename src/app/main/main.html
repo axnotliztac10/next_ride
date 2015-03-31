@@ -48,14 +48,20 @@
 
     <section class="jumbotron mobile_apps">
       <div layout="row" layout-align="center center">
-        <div flex="30">
-          <p style="font-size: 35px;">Get app on:</p>
+        <div flex="40">
+          <p style="font-size: 35px;  margin: 20px;">Get app on:</p>
           <div>
-            <md-button href=""><img src="assets/images/step1/apple_icon@2x.png" alt=""></md-button>
-            <md-button><img src="assets/images/step1/google_play_icon@2x.png"></md-button>
+            <md-button href=""><img src="assets/images/apple.png" alt=""></md-button>
+            <md-button><img src="assets/images/google.png"></md-button>
+          </div>
+          <div>
+          <md-input-container flex class="feed">
+            <input ng-model="feed.email" placeholder="Enter your mobile number">
+            </md-input-container>
+            <md-button class="md-raised md-primary feed-button">Send Text</md-button>
           </div>
         </div>
-        <div flex="30">
+        <div flex="40">
           <img class="image" src="assets/images/step1/phone_image.png" alt="">
         </div>
       </div>
