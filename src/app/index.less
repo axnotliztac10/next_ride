@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
-@import url(/bower_components/md-date-time-ai/dist/md-date-time.css);
+@import url(/bower_components/md-date-time/dist/md-date-time.css);
 
 @main_blue: #6289d9;
 
@@ -72,9 +72,13 @@ md-toolbar.md-default-theme {
   box-shadow: none;
 }
 
+.md-button {
+  text-transform: none !important;
+}
+
 .sign.md-button {
   background-color: @main_blue !important;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: bolder;
   padding: 10px;
   width: 135px;
@@ -127,9 +131,9 @@ ul.nextride_nav {
   position: relative;;
   color: gray;
   float: right;
-  padding: 5px 13px;
+  padding: 3px 9px;
   border-radius: 50%;
-  border: 3px solid gray;
+  border: 2px solid gray;
   margin: 0px 30px;
   font-weight: bold;
   opacity: 0.7;
@@ -254,7 +258,7 @@ md-checkbox.md-checked .md-icon:after {
 }
 
 .form_row.full {
-  height: 316px;
+  height: 346px;
 }
 
 .form_row.full .car {
@@ -276,7 +280,7 @@ md-checkbox.md-checked .md-icon:after {
 }
 
 .full p.price {
-  margin: 10px 0px;
+  margin: 20px 0px;
   color: #626262;
 }
 
@@ -703,9 +707,19 @@ hr {
   position: absolute;
   font-weight: bolder;
   font-size: 20px;
-  top: -7px;
-  left: 37px;
+  top: -9px;
+  left: 29px;
   color: gray;
+}
+
+.time-date {
+    font-size: 14px !important;
+    background: #fff;
+  position: relative;
+  top: 0px;
+  left: -50%;
+  z-index: 100000;
+  box-shadow: 0px 2px 5px -1px #000;
 }
 
 .nextride_nav li.yes.nex_active:after {
@@ -714,4 +728,8 @@ hr {
 
 .date-picker-selecter .md-select-label .md-select-icon:after {
   top: -15px;
+}
+
+.md-select-label .md-select-icon:after {
+  color: @main_blue;
 }

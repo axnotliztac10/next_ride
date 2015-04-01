@@ -1,3 +1,4 @@
+<div style="height: 618px;background: #fff;">
 <div class="form_row">
   <div class="form_title">Some more details</div>
   <ul class="nextride_nav">
@@ -6,10 +7,15 @@
     <li class="yes active nex_active">1</li>
   </ul>
 </div>
-<div class="form_row inputs3" layout>
+<div class="form_row inputs3" style="height: 50px;" layout>
   <md-select placeholder="Passengers" ng-model="booking.passenger" style="margin-right: 11px;">
-    <md-option value="1">Passenger 1</md-option>
-    <md-option value="2">Passenger 2</md-option>
+    <md-option value="1">1</md-option>
+  <md-option value="2">2</md-option>
+  <md-option value="3">3</md-option>
+  <md-option value="4">4</md-option>
+  <md-option value="5">5</md-option>
+  <md-option value="6">6</md-option>
+  <md-option value="7">7</md-option>
   </md-select>
   <md-input-container flex>
   <input ng-model="booking.pickup" g-places-autocomplete marker-id="markerA" placeholder="From">
@@ -21,7 +27,7 @@
 <time-date-picker ng-model="booking.date"></time-date-picker>
 </md-select>
 </div>
-<div class="form_row" style="padding-left: 131px;">
+<div class="form_row" style="padding-left: 221px;   height: 57px;">
   <md-checkbox ng-model="booking.options.oneway" ng-init="booking.options.oneway = true">
     One way
   </md-checkbox>
@@ -34,6 +40,19 @@
   <!--<md-checkbox ng-model="booking.options.houerly">
   Houerly
   </md-checkbox>-->
+</div>
+<div class="form_row height-flex" style="  margin-bottom: 20px;">
+  <div class="bookings">
+    <div class="booking" layout="row" layout-align="space-around center">
+      <div class="bold">BOOKING 1</div>
+      <div>MIN 1 - MAX 4 PEOPLE</div>
+      <div>MAX 3 BIG BAGS</div>
+      <div>10KMS/23MINS</div>
+      <div>Economy</div>
+      <div class="bold">$92</div>
+      <div><a href="">Edit Booking</a></div>
+    </div>
+    </div>
 </div>
 <div class="form_row">
   <div class="col">
@@ -99,4 +118,5 @@
     <img src="assets/images/step2/icn_lock.png" alt="">
     This is a secure 128-Bit SSL Encrypted payment. You are safe.
   </p>
+</div>
 </div>

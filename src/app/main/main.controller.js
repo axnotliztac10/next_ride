@@ -30,11 +30,22 @@ angular.module('nextRide')
       return false;
     }
 
-    $scope.$watchCollection('booking', function (val) {
+    /*$scope.$watchCollection('booking', function (val) {
       if (validateBooking(val)) {
         $location.path('/main/second');
       }
-    });
+    });*/
+
+    $scope.go = function () {
+      $location.path('/main/second');
+    }
+
+    $scope.onSave = function ($value) {
+      $scope.datepicker = false;
+      if ($value == -1) return;
+      $scope.booking.date = $value
+    }
+
   });
 
   angular.module('nextRide')

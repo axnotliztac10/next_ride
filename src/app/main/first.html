@@ -6,10 +6,15 @@
     <li class="active yes">1</li>
   </ul>
 </div>
-<div class="form_row inputs3" layout>
+<div class="form_row inputs3" style="height: 50px;" layout>
   <md-select placeholder="Passengers" ng-model="booking.passenger" style="margin-right: 11px;">
-  <md-option value="1">Passenger 1</md-option>
-  <md-option value="2">Passenger 2</md-option>
+  <md-option value="1">1</md-option>
+  <md-option value="2">2</md-option>
+  <md-option value="3">3</md-option>
+  <md-option value="4">4</md-option>
+  <md-option value="5">5</md-option>
+  <md-option value="6">6</md-option>
+  <md-option value="7">7</md-option>
 </md-select>
 <md-input-container flex>
 <input ng-model="booking.pickup" g-places-autocomplete marker-id="markerA" placeholder="From">
@@ -17,12 +22,14 @@
 <md-input-container flex style="margin-right: 11px;">
 <input ng-model="booking.drop" g-places-autocomplete marker-id="markerB" placeholder="To">
 </md-input-container>
-<md-select placeholder="Date" class="date-picker-selecter" ng-model="booking.date">
+<md-select placeholder="Date" class="date-picker-selecter" ng-model="booking.date" ng-click="datepicker = true">
   <md-select-label>Date {{booking.date | date:'dd-M-yyyy H:mm'}}</md-select-label>
-  <time-date-picker ng-model="booking.date"></time-date-picker>
 </md-select>
+  <div style="position: fixed;z-index:10000; top: 10px; left: 50%" ng-if="datepicker">
+    <time-date-picker on-save="onSave($value)" on-cancel="onSave(-1)" orientation="true" ng-model="booking.date"></time-date-picker>
+    </div>
 </div>
-<div class="form_row" style="padding-left: 131px;">
+<div class="form_row" style="padding-left: 221px;height: 60px;">
   <md-checkbox ng-model="booking.options.oneway" ng-init="booking.options.oneway = true">
   One way
 </md-checkbox>
@@ -41,6 +48,6 @@ Houerly
     <p class="title">{{car.title}}</p>
     <img src="{{car.img}}">
     <p class="price"><span>${{car.price}}</span> each way</p>
-    <md-button ng-click="$parent.booking.car = car" class="md-raised md-primary choose">Choose</md-button>
+    <md-button ng-click="go();$parent.booking.car = car;" class="md-raised md-primary choose">Choose</md-button>
   </div>
 </div>
