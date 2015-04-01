@@ -62,3 +62,4 @@ angular.module('nextRide')
   .controller('ThirdCtrl', function ($scope, $location, $rootScope) {
     //$scope.booking = $rootScope.booking;
   });
+  

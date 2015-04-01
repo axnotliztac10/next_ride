@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('nextRide', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'main', 'mdDateTime'])
-  .config(function ($stateProvider, $urlRouterProvider) {
+angular.module('nextRide', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ngMaterial', 'main', 'mdDateTime', 'ngFacebook', 'googleplus'])
+  .config(function ($stateProvider, $urlRouterProvider, $facebookProvider, GooglePlusProvider) {
     $stateProvider
 		.state('main', {
 			url: '/main',
@@ -23,7 +23,17 @@ angular.module('nextRide', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', '
 			templateUrl: 'app/main/third.html',
 			controller: 'ThirdCtrl'
 		});
+	
+	$facebookProvider.setAppId(649096295216181);
+	$facebookProvider.setPermissions('email');
+
+	GooglePlusProvider.init({
+        clientId: '644096460143-5evkaal3iej4kkp3pq36hisfngjb10s0.apps.googleusercontent.com',
+        apiKey: 'AIzaSyCC5Zs_D1q-RJy3I8hbDk6xxDuNlHZQS_s'
+     });
 
     $urlRouterProvider.otherwise('/main/first');
+  }).run(function () {
+  	
   })
 ;
