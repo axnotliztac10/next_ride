@@ -4,7 +4,7 @@ var gulp = require('gulp');
 
 gulp.paths = {
   src: 'src',
-  dist: 'dist',
+  dist: 'dist/webapp',
   tmp: '.tmp',
   e2e: 'e2e'
 };
@@ -18,7 +18,7 @@ var s3 = require('gulp-s3-upload')({
 
 gulp.task('publish', function() {
  
-	gulp.src('dist/**')
+	gulp.src('dist/webapp/**')
     .pipe(s3({
         Bucket: 'next-ride',
         ACL:    'public-read'
