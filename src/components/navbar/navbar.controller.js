@@ -29,7 +29,7 @@ angular.module('nextRide')
          locals: {},
          controller: DialogController
       });
-      function DialogController(scope, $mdDialog, $facebook, $rootScope, GooglePlus) {
+      function DialogController(scope, $mdDialog, $facebook, $rootScope, GooglePlus, $http) {
         scope.closeDialog = function() {
           $mdDialog.hide();
         }
@@ -41,9 +41,8 @@ angular.module('nextRide')
         scope.fb = function () {
         	$facebook.login().then(function (loginRes) {
         		if (loginRes.status == 'connected') {
-        			$facebook.api("/me").then( 
+        			$facebook.api("/me").then(
 				      function(meRes) {
-				      	console.log(meRes);
 				        $rootScope.user = {
 	        				auth_origin_oauth_token: loginRes.authResponse.accessToken,
 	        				auth_origin_name: 'facebook',
@@ -52,7 +51,17 @@ angular.module('nextRide')
 	        				last_name: meRes.last_name,
 	        				first_name: meRes.first_name,
 	        				mobile_phone_number: '+' + ''
-						};
+						    };
+
+                $http({
+                  url: 'http://shift-passenger-api-dev.appspot.com/signup',
+                  headers : {
+                    'Content-Type': 'application/json',
+                    'API-key': 'dce1f7d8944bbda2eed53a8b96d8fca5a88504e53bd480fe4b55026073fd53e9'
+                  },
+                  method: 'POST',
+                  data: $rootScope.user
+                });
 				      },
 				      function(meError) {
 				        alert("Error on login Facebook")
