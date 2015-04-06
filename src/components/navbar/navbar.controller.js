@@ -74,8 +74,26 @@ angular.module('nextRide')
         	GooglePlus.login().then(function (authResult) {
             console.log(authResult);
 
-            GooglePlus.getUser().then(function (user) {
-                console.log(user);
+            GooglePlus.getUser().then(function (meRes) {
+                $rootScope.user = {
+                  auth_origin_oauth_token: authResult.access_token,
+                  auth_origin_name: 'gplus',
+                  email: meRes.email || '',
+                  full_name: meRes.name,
+                  last_name: meRes.family_name,
+                  first_name: meRes.given_name,
+                  mobile_phone_number: '+' + ''
+                };
+
+                $http({
+                  url: 'http://shift-passenger-api-dev.appspot.com/signup',
+                  headers : {
+                    'Content-Type': 'application/json',
+                    'API-key': 'dce1f7d8944bbda2eed53a8b96d8fca5a88504e53bd480fe4b55026073fd53e9'
+                  },
+                  method: 'POST',
+                  data: $rootScope.user
+                });
             });
         }, function (err) {
             console.log(err);
