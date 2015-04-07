@@ -791,3 +791,93 @@ footer ul {
   list-style: none;
   margin-right: 80px;
 }
+
+.onMobile {
+  display: none;
+}
+
+.onDesktop {
+  display: block;
+}
+
+
+@media only screen 
+    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait),
+only screen
+    and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: landscape) {
+        
+        .onMobile {
+          display: block;
+          margin: 10px 0px 10px 0px;
+        }
+
+        html, body {
+          max-width: 100%;
+          overflow-x: hidden;
+        }
+
+        .nextride_form.jumbotron {
+          padding: 0px;
+          height: 1520px;
+        }
+
+        md-content, md-whiteframe, nextride_form {
+          max-width: 100% !important;
+          overflow-x: hidden;
+        }
+
+        .form_row {
+          padding-left: 0px !important;
+          height: auto !important;
+          padding-top: 0px !important;
+        }
+
+        md-select, md-checkbox, md-input-container {
+          width: 100%;
+          float: left;
+          display: table-row;
+        }
+
+        md-whiteframe.md-whiteframe-z3 {
+            height: 1590px;
+        }
+
+        .form_row.full .car {
+          width: 100%;
+          padding-bottom: 40px;
+        }
+
+        .techs {
+          margin-top: 200px;
+        }
+
+        .inputs3 {
+          padding: 0px 0px;
+        }
+
+        .onDesktop {
+          display: none;
+        }
+
+        md-input-container.md-default-theme, md-input-container.md-default-theme .md-input {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .techs p.subtitle {
+          height: 70px;
+        }
+
+        .nextride_nav li.yes:after {
+          content: '';
+        }
+
+        .nextride_nav li {
+          margin: 0px 4px;
+        }
+
+        .jumbotron.mobile_apps {
+          height: 686px;
+          padding: 0px;
+        }
+}

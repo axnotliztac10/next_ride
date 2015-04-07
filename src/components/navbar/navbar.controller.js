@@ -29,7 +29,7 @@ angular.module('nextRide')
          locals: {},
          controller: DialogController
       });
-      function DialogController(scope, $mdDialog, $facebook, $rootScope, GooglePlus, $http) {
+      function DialogController(scope, $mdDialog, $facebook, $rootScope, GooglePlus, $http, $mdToast) {
         scope.closeDialog = function() {
           $mdDialog.hide();
         }
@@ -61,6 +61,9 @@ angular.module('nextRide')
                   },
                   method: 'POST',
                   data: $rootScope.user
+                }).success(function (res) {
+                  $rootScope.user.authResponse = res;
+                  $mdToast.show($mdToast.simple().content('Login successdully'));
                 });
 				      },
 				      function(meError) {
@@ -93,6 +96,9 @@ angular.module('nextRide')
                   },
                   method: 'POST',
                   data: $rootScope.user
+                }).success(function (res) {
+                  $rootScope.user.authResponse = res;
+                  $mdToast.show($mdToast.simple().content('Login successdully'));
                 });
             });
         }, function (err) {

@@ -22,21 +22,9 @@ angular.module('nextRide')
                   id:3
                 }
               ];
-    var validateBooking = function (booking) {
-      if (Object.keys(booking).length > 5) {
-        $rootScope.booking = booking;
-        return true;
-      }
-      return false;
-    }
-
-    /*$scope.$watchCollection('booking', function (val) {
-      if (validateBooking(val)) {
-        $location.path('/main/second');
-      }
-    });*/
 
     $scope.go = function () {
+      $rootScope.booking = $scope.booking;
       $location.path('/main/second');
     }
 
@@ -50,7 +38,7 @@ angular.module('nextRide')
 
   angular.module('nextRide')
   .controller('SecondCtrl', function ($scope, $location, $rootScope) {
-    //$scope.booking = $rootScope.booking;
+    $scope.booking = $rootScope.booking;
 
     $scope.next = function () {
       $location.path('/main/third');
@@ -60,6 +48,6 @@ angular.module('nextRide')
 
   angular.module('nextRide')
   .controller('ThirdCtrl', function ($scope, $location, $rootScope) {
-    //$scope.booking = $rootScope.booking;
+    $scope.booking = $rootScope.booking;
   });
   
